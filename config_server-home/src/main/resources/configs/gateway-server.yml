@@ -17,7 +17,7 @@ spring:
             allowCredentials: true # 요청시 인증 정보 전송 허가
             allowedHeaders: '*'
             allowedMethods: '*'
-      discovery.locator:
+      discovery.locator: # 서비스 디스커버리에 등록된 서비스를 기반으로 게이트웨이가 경로를 생성하도록 설정
         enabled: true
         lowerCaseServiceId: true
 

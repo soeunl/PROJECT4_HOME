@@ -3,12 +3,12 @@ server:
 
 eureka:
   instance:
-    hostname: localhost
+    hostname: localhost # 유레카 인스턴스의 호스트 이름을 설정
   client:
-    registerWithEureka: false
-    fetchRegistry: false
+    registerWithEureka: false  # 컨피그 서버가 유레카 서비스에 등록하지 않도록 지시
+    fetchRegistry: false # 컨피그 서버가 캐시 레지스트리 정보를 로컬에 캐시하지 않도록 지시
     serviceUrl:
-      defaultZone:
+      defaultZone: # 서비스 URL을 제공
         - http://${eureka.instance.hostname}:${server.port}/eureka/
 
   server:

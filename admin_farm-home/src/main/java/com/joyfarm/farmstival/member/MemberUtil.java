@@ -42,7 +42,6 @@ public class MemberUtil {
         }
 
         return null;
-
         // SecurityContextHolder =  스프링 시큐리티에서 현재 인증 정보를 저장하는 컨텍스트
         // Authentication 인터페이스 = 인증된 사용자에 대한 정보를 담고 있는 객체(사용자의 인증 여부나 인증에 사용된 정보, 인증된 사용자에 대한 추가적인 정보), 인증 과정 전체를 나타내는 개념으로, 사용자의 인증 정보를 담는 통
         // Principal 인터페이스 = 인증된 사용자의 고유 식별 정보(인증된 주체, 실제 인증된 사용자), Principal은 Authentication의 일부분으로 볼 수 있음, 인증된 사용자 자체를 나타내는 개념으로, Authentication 통 안에 들어있는 사용자 정보

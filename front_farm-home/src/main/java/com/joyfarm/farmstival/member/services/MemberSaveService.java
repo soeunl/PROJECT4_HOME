@@ -29,7 +29,7 @@ public class MemberSaveService {
      * @param form
      */
     public void save(RequestJoin form) { // 회원 가입 요청 정보(RequestJoin)를 받아 회원 가입 처리를 수행
-        Member member = new ModelMapper().map(form, Member.class);
+        Member member = new ModelMapper().map(form, Member.class); // form 객체의 속성과 Member 클래스의 속성 이름이 일치하면, 해당 값을 자동으로 복사, 매핑이 완료되면, member 변수에는 form 객체의 값을 가지는 새로운 Member 객체가 생성
         String hash = passwordEncoder.encode(form.getPassword()); // BCrypt 해시화
         member.setPassword(hash);
 

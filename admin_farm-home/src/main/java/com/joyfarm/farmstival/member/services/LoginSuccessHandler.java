@@ -27,7 +27,6 @@ public class LoginSuccessHandler implements AuthenticationSuccessHandler {
 
         response.sendRedirect(request.getContextPath() + redirectUrl);
     }
-
     // 사용자가 성공적으로 로그인했을 때 다음과 같은 작업을 수행
     // 세션에 남아 있을 수 있는 로그인 요청 여부 표시를 제거
     // 요청 파라미터에 지정된 리다이렉트 주소가 있다면 해당 주소로 이동

@@ -6,13 +6,13 @@ spring:
     name: config-server
 
   profiles:
-    active: native
+    active: native # 백앤드 저장소(파일 시스템)와 관련된 스프링 프로파일을 설정
 
   cloud:
     config:
       server:
         native:
-          search-locations: classpath:/configs
+          search-locations: classpath:/configs # classpath 속성을 사용하면 스프링 클라우드 컨피그 서버는 src/main/resources/config 폴더를 찾는다.
 
 encrypt:
-  key: ${secretKey}
+  key: ${secretKey} # 컨피그 서버는 이 환경변수로 입력되는 값을 대칭 키로 사용
